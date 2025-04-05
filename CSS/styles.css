@@ -1,0 +1,21 @@
+/*Nav Bar*/
+.navbar-brand {
+    position: relative;
+}
+
+#logo {
+    width: 60px;
+}
+
+#title {
+    color: #2383d1;
+    position: absolute;
+    bottom: 15px;
+    font-size: 30px;
+    left: 55px;
+    font-weight: bold;
+}
+
+#navbar-main {
+    background-color: #121212;
+}
