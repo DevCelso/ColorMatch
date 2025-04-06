@@ -1,26 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ColorMatch</title>
-    <link rel="shortcut icon" href="IMG/icone.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" integrity="sha512-drnvWxqfgcU6sLzAJttJv7LKdjWn0nxWCSbEAtxJ/YYaZMyoNLovG7lPqZRdhgL1gAUfa+V7tbin8y+2llC1cw==" crossorigin="anonymous" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <!-- CSS do projeto -->
-    <link rel="stylesheet" href="CSS/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ColorMatch</title>
+  <link rel="shortcut icon" href="img/icone.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header>
-        <nav id="navbar-main">
-            <a href="" class="navbar-brand">
-                <img src="IMG/icone.png" alt="ColorMatch" id="logo">
-                <span id="title">ColorMatch</span>
-            </a>
-            
-        </nav>
-    </header>
-    
+  <header>
+    <nav class="navbar navbar-light bg-light justify-content-between px-4">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="img/icone.png" alt="ColorMatch" id="logo" width="40" class="mr-2"/>
+          <span id="title" class="h4 mb-0">ColorMatch</span>
+        </a>
+      
+        <div>
+          <a href="#sobre" class="mr-3">Sobre</a>
+          <a href="#contato" class="mr-3">Contato</a>
+        </div>
+      </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="jumbotron text-center bg-primary text-white">
+    <div class="container">
+      <h1 class="display-4">Encontre a cor perfeita</h1>
+      <p class="lead">Venda de tintas + Simulador de combinações incríveis</p>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Nossos Produtos</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tinta Azul Celeste</h5>
+            <p class="card-text">Ideal para ambientes calmos e inspiradores.</p>
+            <button class="btn btn-primary">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tinta Verde Natureza</h5>
+            <p class="card-text">Traga frescor e harmonia ao seu espaço.</p>
+            <button class="btn btn-primary">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tinta Amarela Solar</h5>
+            <p class="card-text">Perfeita para ambientes alegres e vibrantes.</p>
+            <button class="btn btn-primary">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simulador de Cores -->
+  <section class="container text-center my-5">
+    <h2>Teste uma cor de fundo</h2>
+    <input type="color" id="colorPicker" class="form-control w-25 mx-auto mt-3" />
+    <button class="btn btn-success mt-2" onclick="mudarCor()">Aplicar</button>
+  </section>
+
+  <!-- Combinações Sugeridas -->
+  <section class="container my-5">
+    <h2 class="text-center">Combinações de Cores</h2>
+    <div class="d-flex justify-content-around mt-4 flex-wrap">
+      <div class="p-3 text-white" style="background-color: #3498db; width: 200px;">Azul + Branco</div>
+      <div class="p-3 text-white" style="background-color: #2ecc71; width: 200px;">Verde + Bege</div>
+      <div class="p-3 text-white" style="background-color: #f39c12; width: 200px;">Amarelo + Cinza</div>
+    </div>
+  </section>
+
+  <script>
+    function mudarCor() {
+      const cor = document.getElementById('colorPicker').value;
+      document.body.style.backgroundColor = cor;
+    }
+  </script>
 </body>
 </html>
