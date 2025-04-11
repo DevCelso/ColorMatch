@@ -6,83 +6,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ColorMatch</title>
   <link rel="shortcut icon" href="img/icon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 
 <body>
   <header id="">
-    <nav class="navbar">
-      <a href="#" class="navbar-brand">
-        <img src="img/icon.png" alt="ColorMatch" id="logo" width="55" />
+    <nav class="navbar navbar-expand-md" id="main-navbar">
+      <a class="navbar-brand" href="#">
+        <img src="img/icon.png" id="logo" />
         <span id="title">ColorMatch</span>
       </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="" class="nav-link">Meus Filmes</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Meus Filmes</a>
-          </li>
+        <ul class="navbar-nav" id="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">Meus Filmes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
         </ul>
       </div>
     </nav>
+
   </header>
 
 
+
   <!-- Produtos -->
-  <section id="main-container" class="container my-5">
-    <h2 class="text-center mb-4">Nossos Produtos</h2>
+  <section id="main-container" class="container">
+    <h2 class="section-title">Nossos Produtos</h2>
     <div class="row">
-      <div class="col-md-4 mb-3">
-        <div class="card">
+      <div class="col-sm-6 col-md-4 mb-3">
+        <div class="card" id="card">
           <div class="card-body text-center">
             <h5 class="card-title">Tinta Azul Celeste</h5>
-            <p class="card-text">Ideal para ambientes calmos e inspiradores.</p>
-            <img src="img/paint.jpg" alt="paint" id="paint" width="200">
+            <p class="card-text">Ideal para ambientes calmos.</p>
+            <img src="img/paint.jpg" alt="paint" class="img-fluid paint">
           </div>
-          <button class="btn btn-primary">Comprar</button>
+          <div class="btn-center">
+            <button class="btn custom-btn">
+              <svg width="180px" height="60px" viewBox="0 0 180 60">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" />
+              </svg>
+              <span>Comprar</span>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-sm-6 col-md-4 mb-3">
         <div class="card">
           <div class="card-body text-center">
             <h5 class="card-title">Tinta Verde Natureza</h5>
             <p class="card-text">Traga frescor e harmonia ao seu espaço.</p>
-            <button class="btn btn-primary">Comprar</button>
+            <img src="img/paint.jpg" alt="paint" class="img-fluid paint">
+          </div>
+          <div class="btn-center">
+            <button class="btn custom-btn">
+              <svg width="180px" height="60px" viewBox="0 0 180 60">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" />
+              </svg>
+              <span>Comprar</span>
+            </button>
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-sm-6 col-md-4 mb-3">
         <div class="card">
           <div class="card-body text-center">
             <h5 class="card-title">Tinta Amarela Solar</h5>
             <p class="card-text">Perfeita para ambientes alegres e vibrantes.</p>
-            <button class="btn btn-primary">Comprar</button>
+            <img src="img/paint.jpg" alt="paint" class="img-fluid paint">
+          </div>
+          <div class="btn-center">
+            <button class="btn custom-btn">
+              <svg width="180px" height="60px" viewBox="0 0 180 60">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" />
+              </svg>
+              <span>Comprar</span>
+            </button>
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   </section>
 
   <!-- Simulador de Cores -->
   <section class="container text-center my-5">
-    <h2>Teste uma cor de fundo</h2>
+    <h2 class="text-outline">Teste uma cor de fundo</h2>
     <input type="color" id="colorPicker" class="form-control w-25 mx-auto mt-3" />
-    <button class="btn btn-success mt-2" onclick="mudarCor()">Aplicar</button>
+    <div class="btn-center">
+      <button class="btn custom-btn mt-2" onclick="mudarCor()">
+        <svg width="180px" height="60px" viewBox="0 0 180 60">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" />
+        </svg>
+        <span>Aplicar</span>
+      </button>
+    </div>
   </section>
 
   <!-- Combinações Sugeridas -->
   <section class="container my-5">
-    <h2 class="text-center">Combinações de Cores</h2>
+    <h2 class="text-center text-outline">Combinações de Cores</h2>
     <div class="d-flex justify-content-around mt-4 flex-wrap">
       <div class="p-3 text-white" style="background-color: #3498db; width: 200px;">Azul + Branco</div>
       <div class="p-3 text-white" style="background-color: #2ecc71; width: 200px;">Verde + Bege</div>
