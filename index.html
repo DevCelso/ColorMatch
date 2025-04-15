@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="js/script.js"></script>
 </head>
 
 <body>
+
   <header id="">
     <nav class="navbar navbar-expand-md" id="main-navbar">
       <a class="navbar-brand" href="#">
@@ -24,25 +26,22 @@
 
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav" id="nav-list">
-          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
         </ul>
       </div>
     </nav>
-
   </header>
 
-
-
-  <!-- Produtos -->
+  <!-- Products -->
   <section id="main-container" class="container">
-    <h2 class="section-title">Nossos Produtos</h2>
+    <h2 class="section-title">Our Products</h2>
     <div class="row">
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card" id="card">
           <div class="card-body text-center">
-            <h5 class="card-title">Tinta Azul Celeste</h5>
-            <p class="card-text">Ideal para ambientes calmos.</p>
+            <h5 class="card-title">Celestial Blue Paint</h5>
+            <p class="card-text">Ideal for calm environments.</p>
             <img src="img/paint.jpg" alt="paint" class="img-fluid paint">
           </div>
           <div class="btn-center">
@@ -50,7 +49,7 @@
               <svg width="180px" height="60px" viewBox="0 0 180 60">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" />
               </svg>
-              <span>Comprar</span>
+              <span class="section-title">Buy</span>
             </button>
           </div>
         </div>
@@ -58,8 +57,8 @@
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card">
           <div class="card-body text-center">
-            <h5 class="card-title">Tinta Verde Natureza</h5>
-            <p class="card-text">Traga frescor e harmonia ao seu espaço.</p>
+            <h5 class="card-title">Nature Green Paint</h5>
+            <p class="card-text">Bring freshness and harmony to your space.</p>
             <img src="img/paint.jpg" alt="paint" class="img-fluid paint">
           </div>
           <div class="btn-center">
@@ -67,7 +66,7 @@
               <svg width="180px" height="60px" viewBox="0 0 180 60">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" />
               </svg>
-              <span>Comprar</span>
+              <span class="section-title">Buy</span>
             </button>
           </div>
         </div>
@@ -75,8 +74,8 @@
       <div class="col-sm-6 col-md-4 mb-3">
         <div class="card">
           <div class="card-body text-center">
-            <h5 class="card-title">Tinta Amarela Solar</h5>
-            <p class="card-text">Perfeita para ambientes alegres e vibrantes.</p>
+            <h5 class="card-title">Solar Yellow Paint</h5>
+            <p class="card-text">Perfect for cheerful and vibrant environments.</p>
             <img src="img/paint.jpg" alt="paint" class="img-fluid paint">
           </div>
           <div class="btn-center">
@@ -84,37 +83,25 @@
               <svg width="180px" height="60px" viewBox="0 0 180 60">
                 <polyline points="179,1 179,59 1,59 1,1 179,1" />
               </svg>
-              <span>Comprar</span>
+              <span class="section-title">Buy</span>
             </button>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   </section>
 
-  <!-- Simulador de Cores -->
+  <!-- Color Simulator -->
   <section class="container text-center my-5">
-    <h2 class="text-outline">Teste uma cor de fundo</h2>
+    <h2 class="text-outline">Test a Background Color</h2>
     <input type="color" id="colorPicker" class="form-control w-25 mx-auto mt-3" />
     <div class="btn-center">
-      <button class="btn custom-btn mt-2" onclick="mudarCor()">
+      <button class="btn custom-btn mt-4" onclick="mudarCor()">
         <svg width="180px" height="60px" viewBox="0 0 180 60">
           <polyline points="179,1 179,59 1,59 1,1 179,1" />
         </svg>
-        <span>Aplicar</span>
+        <span class="section-title">Apply</span>
       </button>
-    </div>
-  </section>
-
-  <!-- Combinações Sugeridas -->
-  <section class="container my-5">
-    <h2 class="text-center text-outline">Combinações de Cores</h2>
-    <div class="d-flex justify-content-around mt-4 flex-wrap">
-      <div class="p-3 text-white" style="background-color: #3498db; width: 200px;">Azul + Branco</div>
-      <div class="p-3 text-white" style="background-color: #2ecc71; width: 200px;">Verde + Bege</div>
-      <div class="p-3 text-white" style="background-color: #f39c12; width: 200px;">Amarelo + Cinza</div>
     </div>
   </section>
 
@@ -124,8 +111,6 @@
       document.body.style.backgroundColor = cor;
     }
   </script>
-
-
 
   <footer id="footer">
     <div id="social-container">
@@ -144,7 +129,7 @@
     <p>&copy;2025 ColorMatch</p>
   </footer>
 
-  <!-- Boorstrap JS-->
+  <!-- Bootstrap JS-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.js"
     integrity="sha512-lsA4IzLaXH0A+uH6JQTuz6DbhqxmVygrWv1CpC/s5vGyMqlnP0y+RYt65vKxbaVq+H6OzbbRtxzf+Zbj20alGw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
